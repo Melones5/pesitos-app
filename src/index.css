@@ -3,3 +3,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {    
+    @apply bg-[#f3f3f3];
+  }  
+}
+
+/* 
+colores
+header: 394C3C
+main: 2FAE7D
+  92C56A
+  E6D15A
+footeR: F7785D
+*/

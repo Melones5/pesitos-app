@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Chart as ChartJS, plugins } from 'chart.js/auto'
 import { Doughnut } from 'react-chartjs-2'
 import { useGlobalState } from '../context/GlobalState'
@@ -7,30 +7,95 @@ const PieChart = () => {
 
   const { transactions } = useGlobalState();
 
-  const groupByCategory = Object.groupBy(transactions, transaction => {
-    return transaction.categoria;
-  });
-  
-  console.log(groupByCategory)
-  
+  // Almacenar categorías agrupadas y sus importes totales
+  const [groupedData, setGroupedData] = useState([]);
+
+  useEffect(() => {
+    const groupedTransactions = {};
+
+    // Agrupamos las transacciones por categoria, sumando sus montos
+    transactions.forEach((transaction) => {
+      const category = transaction.categoria;
+      if (!groupedTransactions[category]) {
+        groupedTransactions[category] = 0;
+      }
+      groupedTransactions[category] += transaction.monto;
+    });
+
+    // Convertimos los datos agrupados en el formato deseado para el gráfico
+    const chartData = Object.entries(groupedTransactions).map(([category, amount]) => ({
+      category,
+      amount,
+    }));
+
+    setGroupedData(chartData);
+  }, [transactions]);
+
+  // Utilizar los datos agrupados para las etiquetas y los datos del gráfico
+  const labels = groupedData.map((item) => item.category); //los labels en categorías
+  const data = groupedData.map((item) => item.amount); // los labels por monto
+
   return (
     <div className='w-[400px]'>
       <Doughnut
         data={{
-          labels: transactions.map(transaction => transaction.categoria),
+          labels,
           datasets: [{
-            label: 'My First Dataset',
-            data: transactions.map(transaction => transaction.monto),
+            label: 'total',
+            data,
             backgroundColor: [
-              'rgb(255, 99, 132)',
-              'rgb(54, 162, 235)',
-              'rgb(255, 205, 86)',
-              'rgb(255, 29, 122)',
-              'rgb(255, 94, 232)',
+              '#f44336', // Rojo
+              '#e91e63', // Rosa fuerte
+              '#9c27b0', // Púrpura
+              '#673ab7', // Azul violeta
+              '#3f51b5', // Azul índigo
+              '#2196f3', // Azul
+              '#03a9f4', // Azul cielo
+              '#00bcd4', // Cian
+              '#009688', // Verde esmeralda
+              '#4caf50', // Verde
             ],
-            borderRadius: 2,
-            hoverOffset: 4,
+            // borderColor:[
+            //   '#f44336', // Rojo
+            //   '#e91e63', // Rosa fuerte
+            //   '#9c27b0', // Púrpura
+            //   '#673ab7', // Azul violeta
+            //   '#3f51b5', // Azul índigo
+            //   '#2196f3', // Azul
+            //   '#03a9f4', // Azul cielo
+            //   '#00bcd4', // Cian
+            //   '#009688', // Verde esmeralda
+            //   '#4caf50', // Verde
+            // ],      
+            hoverOffset: 8,            
+            spacing: 2,     
+            borderColor: '#fff'
           }]
+        }}
+        options={{
+          responsive: true,          
+          maintainAspectRatio:true,
+          plugins: {
+            legend: {
+              position: 'top',
+              labels: {
+                font: {
+                  size: 12,
+                },
+                boxWidth: 10,              
+                usePointStyle: true,
+              }
+            },
+            title: {
+              display:true,
+              text: "Análisis de gastos",
+              color: '#2FAE7D',
+              font: {
+                weight: 'bold',
+                size: 20
+              }    
+            }
+          }
         }}
       />
     </div>

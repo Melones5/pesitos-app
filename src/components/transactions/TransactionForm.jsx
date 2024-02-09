@@ -35,6 +35,19 @@ const TransactionForm = () => {
   }
 
 
+  const categorias = [
+    'sueldo',
+    'compras',
+    'entretenimientos',
+    'restaurantes y bares',
+    'salud y deporte',
+    'sin categoría',
+    'servicios',
+    'supermercado',
+    'transporte',
+    'vacaciones'
+  ] 
+
   return (
     <div>
       <form ref={form} onSubmit={handleSubmit}>
@@ -47,10 +60,15 @@ const TransactionForm = () => {
         <select required name="" id="" value={categoria} onChange={handleChangeCategoria}>
           <option value="" disabled>--Elige una opcion--</option>
           <option value="sueldo">Sueldo</option>
-          <option value="comida">Comida</option>
-          <option value="factura">Factura</option>
-          <option value="entretenimiento">Entretenimiento</option>
-          <option value="ropa">Ropa</option>
+          <option value="compras">Compras</option>
+          <option value="entretenimientos">Entretenimientos</option>
+          <option value="restaurantes y bares">Restaurantes y bares</option>
+          <option value="salud y deporte">Salud y deporte</option>
+          <option value="sin categoría">Sin categoría</option>
+          <option value="servicios">Servicios</option>
+          <option value="supermercado">Supermercado</option>          
+          <option value="transporte">Transporte</option>
+          <option value="vacaciones">Vacaciones</option>
         </select>
         <button className='bg-indigo-700 text-white px-3 py-2 rounded-lg block mb-2 w-full'>Añade una transacción</button>
       </form>

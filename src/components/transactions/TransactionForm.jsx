@@ -16,7 +16,7 @@ const TransactionForm = () => {
     e.preventDefault();
     addTransaction({ 
       id: window.crypto.randomUUID(),
-      monto,
+      monto: +monto,
       tipo,
       categoria
     })

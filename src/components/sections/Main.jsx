@@ -6,11 +6,10 @@ import PieChart from '../PieChart'
 
 const Main = () => {
   return (
-    <div>
-      <p className='text-center pt-2 pb-2'>Toda la lógica y gráficos</p>
-      <TransactionForm />
-      <Balance />
+    <div className='max-w-[940px] mx-auto p-2'>      
       <PieChart />
+      <TransactionForm />
+      <Balance />      
       <TransactionList />
     </div>
   )

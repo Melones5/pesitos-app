@@ -29,14 +29,14 @@ const PieChart = () => {
     }));
 
     setGroupedData(chartData);
-  }, [transactions]);
+  }, [transactions]);  
 
   // Utilizar los datos agrupados para las etiquetas y los datos del gráfico
   const labels = groupedData.map((item) => item.category); //los labels en categorías
   const data = groupedData.map((item) => item.amount); // los labels por monto
 
   return (
-    <div className='w-[400px]'>
+    <div className='flex justify-center items-center border border-[#023749] mx-auto pb-4 pt-4 h-96'>
       <Doughnut
         data={{
           labels,
@@ -74,7 +74,7 @@ const PieChart = () => {
         }}
         options={{
           responsive: true,          
-          maintainAspectRatio:true,
+          maintainAspectRatio: true,
           plugins: {
             legend: {
               position: 'top',
@@ -90,10 +90,14 @@ const PieChart = () => {
               display:true,
               text: "Análisis de gastos",
               color: '#2FAE7D',
-              font: {
+              font: {                
                 weight: 'bold',
                 size: 20
-              }    
+              },    
+              padding: {
+                top: 0,
+                bottom:10
+              }
             }
           }
         }}

@@ -9,7 +9,7 @@ const Home = () => {
       <section>
         <Header />
       </section>
-      <section>
+      <section className='relative min-h-screen'>
         <Main />
       </section>
       <section>

@@ -49,7 +49,7 @@ const TransactionForm = () => {
   ] 
 
   return (
-    <div>
+    <div className='py-5'>
       <form ref={form} onSubmit={handleSubmit}>
         <input required type="number" placeholder='ingrese monto' onChange={(e) => setMonto(e.target.value)} step={0.01}/>
         <select required name="" id="" value={tipo} onChange={handleChangeTipo}>
@@ -70,7 +70,7 @@ const TransactionForm = () => {
           <option value="transporte">Transporte</option>
           <option value="vacaciones">Vacaciones</option>
         </select>
-        <button className='bg-indigo-700 text-white px-3 py-2 rounded-lg block mb-2 w-full'>Añade una transacción</button>
+        <button className='bg-[#023749] text-white px-3 py-2 rounded-lg block mb-2 w-full font-jost text-xl'>Añade una transacción</button>
       </form>
     </div>
   )

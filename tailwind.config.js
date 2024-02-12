@@ -8,6 +8,8 @@ export default {
     extend: {
       fontFamily: {
         'jost': ['Jost', 'sans-serif'],
+        'open-sans': ['Open Sans', 'sans-serif'],       
+        'lato': ['Lato', 'sans-serif'] 
       },
     },
   },

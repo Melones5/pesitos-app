@@ -13,9 +13,14 @@ const Balance = () => {
   const total = montos.reduce((acc, item) => (acc+=item), 0).toFixed(2)
 
   return (
-    <div className='flex justify-between items-center text-[#023749] font-jost border border-[#023749] p-4'>
-      <h3 className='font-bold '>Balance Gastos / Ingresos</h3>      
-      <span className='font-bold text-center py-2 font-jost text-2xl'>${total}</span>
+    <div className='flex flex-col text-white font-jost border p-6 mt-5 rounded-md bg-green-400 shadow-lg'>
+      <div className='flex items-center justify-between'>
+        <h2 className='font-bold '>Balance Gastos / Ingresos</h2>  
+        <p>$</p>
+      </div>
+      <div className='flex flex-col'>
+        <span className='font-bold py-2 font-jost text-2xl'>${total}</span>
+      </div>
     </div>
   )
 }

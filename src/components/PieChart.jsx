@@ -2,41 +2,22 @@ import React, { useEffect, useState } from 'react'
 import { Chart as ChartJS, plugins } from 'chart.js/auto'
 import { Doughnut } from 'react-chartjs-2'
 import { useGlobalState } from '../context/GlobalState'
+import useGroupedData from '../hooks/useGroupedData'
 
 const PieChart = () => {
 
   const { transactions } = useGlobalState();
 
-  // Almacenar categorías agrupadas y sus importes totales
-  const [groupedData, setGroupedData] = useState([]);
-
-  useEffect(() => {
-    const groupedTransactions = {};
-
-    // Agrupamos las transacciones por categoria, sumando sus montos
-    transactions.forEach((transaction) => {
-      const category = transaction.categoria;
-      if (!groupedTransactions[category]) {
-        groupedTransactions[category] = 0;
-      }
-      groupedTransactions[category] += transaction.monto;
-    });
-
-    // Convertimos los datos agrupados en el formato deseado para el gráfico
-    const chartData = Object.entries(groupedTransactions).map(([category, amount]) => ({
-      category,
-      amount,
-    }));
-
-    setGroupedData(chartData);
-  }, [transactions]);  
+  const groupedData = useGroupedData(transactions)
 
   // Utilizar los datos agrupados para las etiquetas y los datos del gráfico
   const labels = groupedData.map((item) => item.category); //los labels en categorías
   const data = groupedData.map((item) => item.amount); // los labels por monto
 
+  console.log(labels, data)
+
   return (
-    <div className='flex justify-center items-center border border-[#023749] mx-auto pb-4 pt-4 h-96'>
+    <div className='flex justify-center items-center rounded-md shadow-md bg-white mx-auto pb-4 pt-4 h-96'>
       <Doughnut
         data={{
           labels,
@@ -54,19 +35,7 @@ const PieChart = () => {
               '#00bcd4', // Cian
               '#009688', // Verde esmeralda
               '#4caf50', // Verde
-            ],
-            // borderColor:[
-            //   '#f44336', // Rojo
-            //   '#e91e63', // Rosa fuerte
-            //   '#9c27b0', // Púrpura
-            //   '#673ab7', // Azul violeta
-            //   '#3f51b5', // Azul índigo
-            //   '#2196f3', // Azul
-            //   '#03a9f4', // Azul cielo
-            //   '#00bcd4', // Cian
-            //   '#009688', // Verde esmeralda
-            //   '#4caf50', // Verde
-            // ],      
+            ],      
             hoverOffset: 8,            
             spacing: 2,     
             borderColor: '#fff'
@@ -80,7 +49,9 @@ const PieChart = () => {
               position: 'top',
               labels: {
                 font: {
+                  weight: 'normal',
                   size: 12,
+                  family: "'Lato', 'sans-serif'",
                 },
                 boxWidth: 10,              
                 usePointStyle: true,
@@ -92,7 +63,8 @@ const PieChart = () => {
               color: '#2FAE7D',
               font: {                
                 weight: 'bold',
-                size: 20
+                size: 22,
+                family: "'Jost', 'sans-serif'",
               },    
               padding: {
                 top: 0,

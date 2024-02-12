@@ -1,45 +1,33 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { useGlobalState } from '../../context/GlobalState'
+import useGroupedData from '../../hooks/useGroupedData'
 
 const TransactionList = () => {
 
   const { transactions } = useGlobalState()
 
-
-  // // Almacenar categorías agrupadas y sus importes totales
-  // const [groupedData, setGroupedData] = useState([]);
-
-  // useEffect(() => {
-  //   const groupedTransactions = {};
-
-  //   // Agrupamos las transacciones por categoria, sumando sus montos
-  //   transactions.forEach((transaction) => {
-  //     const category = transaction.categoria;
-  //     if (!groupedTransactions[category]) {
-  //       groupedTransactions[category] = 0;
-  //     }
-  //     groupedTransactions[category] += transaction.monto;
-  //   });
-
-  //   // Convertimos los datos agrupados en el formato deseado para el gráfico
-  //   const chartData = Object.entries(groupedTransactions).map(([category, amount]) => ({
-  //     category,
-  //     amount,
-  //   }));
-
-  //   setGroupedData(chartData);
-  // }, [transactions]);  
+  const groupedData = useGroupedData(transactions)
 
   return (
     <div className='py-6'>
       <ul>
-        {
-          transactions.map((transation) => (
-            <div className='border-b-2 border-[#0237499c] text-[#023749] font-bold font-jost p-3'>
-              <li key={transation.id} className='flex justify-between items-center'>
-                <span>{transation.categoria}</span>
-                <p>{transation.monto}</p>
-                {/* <span>{transation.tipo}</span> */}
+        {transactions.map((transation) => (
+            <div className='border-b-2 font-bold font-jost p-3 mt-3 rounded-md shadow-md bg-white' key={transation.id}>
+              <li className='flex items-center'>
+                {transation.tipo === 'ingreso'? (
+                  <div  className='flex justify-between w-full'>
+                      <span className='text-gray-700'>{transation.categoria}</span>
+                      <p className='text-green-400'>${transation.monto}</p>
+                      {/* <span>{transation.tipo}</span> */}
+                  </div>
+                  )
+                  : (
+                  <div  className='flex justify-between w-full'> 
+                      <span className='text-gray-700'>{transation.categoria}</span>
+                      <p className='text-red-400'>${transation.monto}</p>
+                      {/* <span>{transation.tipo}</span> */}
+                  </div>
+                )}
               </li>
             </div>
           ))

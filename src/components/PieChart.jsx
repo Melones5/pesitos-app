@@ -51,7 +51,7 @@ const PieChart = () => {
                 font: {
                   weight: 'normal',
                   size: 12,
-                  family: "'Lato', 'sans-serif'",
+                  family: "'Fredoka', 'sans-serif'",
                 },
                 boxWidth: 10,              
                 usePointStyle: true,
@@ -62,9 +62,9 @@ const PieChart = () => {
               text: "Análisis de gastos",
               color: '#2FAE7D',
               font: {                
-                weight: 'bold',
+                weight: 'bolder',
                 size: 22,
-                family: "'Jost', 'sans-serif'",
+                family: "'Fredoka', 'sans-serif'",
               },    
               padding: {
                 top: 0,

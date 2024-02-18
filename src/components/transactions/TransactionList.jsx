@@ -11,20 +11,20 @@ const TransactionList = () => {
   return (
     <div className='py-6'>
       <ul>
-        {transactions.map((transation) => (
-            <div className='border-b-2 font-bold font-jost p-3 mt-3 rounded-md shadow-md bg-white' key={transation.id}>
+        {transactions.map((transaction) => (
+            <div className='border-b-2 font-bold font-jost p-3 mt-3 rounded-md shadow-md bg-white' key={transaction.id}>
               <li className='flex items-center'>
-                {transation.tipo === 'ingreso'? (
-                  <div  className='flex justify-between w-full'>
-                      <span className='text-gray-700'>{transation.categoria}</span>
-                      <p className='text-green-400'>${transation.monto}</p>
+                {transaction.tipo === 'ingreso'? (
+                  <div  className='flex justify-between w-full'>                      
+                      <span className='text-gray-700'>{transaction.categoria}</span>
+                      <p className='text-green-400'>${transaction.monto}</p>
                       {/* <span>{transation.tipo}</span> */}
                   </div>
                   )
                   : (
                   <div  className='flex justify-between w-full'> 
-                      <span className='text-gray-700'>{transation.categoria}</span>
-                      <p className='text-red-400'>${transation.monto}</p>
+                      <span className='text-gray-700'>{transaction.categoria}</span>
+                      <p className='text-red-400'>${transaction.monto}</p>
                       {/* <span>{transation.tipo}</span> */}
                   </div>
                 )}

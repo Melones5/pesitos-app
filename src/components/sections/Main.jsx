@@ -6,11 +6,11 @@ import PieChart from '../PieChart'
 
 const Main = () => {
   return (
-    <div className='max-w-[940px] mx-auto p-2'>      
+    <div className='max-w-[940px] mx-auto p-2'>            
       <PieChart />
       <Balance />      
       <TransactionList />
-      <TransactionForm />
+      {/* <TransactionForm /> */}
     </div>
   )
 }

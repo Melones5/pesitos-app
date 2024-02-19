@@ -24,12 +24,12 @@ export const GlobalState = ({children}) => {
       localStorage.setItem('transactions', JSON.stringify(state))
     }, [state])
 
-  const addTransaction = (transaction) =>{
+  const addTransaction = (data) =>{
     dispatch({
       type: 'ADD_TRANSACTION',
-      payload: transaction
+      payload: data
     })
-    console.log("addTransaction")
+    console.log("addTransaction", data)
   }  
 
   const calculateTotalIncome = () => {

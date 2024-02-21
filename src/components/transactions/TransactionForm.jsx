@@ -61,7 +61,7 @@ const TransactionForm = ({ onClose }) => {
     'Entretenimientos',
     'Restaurantes y bares',
     'Salud y deporte',
-    'Sin categoría',
+    'Varios',
     'Servicios',
     'Supermercado',
     'Transporte',

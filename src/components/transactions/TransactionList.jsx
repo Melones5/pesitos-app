@@ -22,7 +22,7 @@ const TransactionList = () => {
         return <FontAwesomeIcon className='p-1 border-2 rounded-lg border-[#673ab7] text-[#673ab7] w-[24px] h-[24px]' icon={faUtensils} />;
       case 'Salud y deporte':
         return <FontAwesomeIcon className='p-1 border-2 rounded-lg border-[#3f51b5] text-[#3f51b5] w-[24px] h-[24px]' icon={faBriefcaseMedical} />;
-      case 'Sin categoría':
+      case 'Varios':
         return <FontAwesomeIcon className='p-1 border-2 rounded-lg border-[#2196f3] text-[#2196f3] w-[24px] h-[24px]' icon={faHome} />;
       case 'Servicios':
         return <FontAwesomeIcon className='p-1 border-2 rounded-lg border-[#03a9f4] text-[#03a9f4] w-[24px] h-[24px]' icon={faFileInvoice} />;

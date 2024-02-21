@@ -16,6 +16,53 @@ const PieChart = () => {
 
   console.log(labels, data)
 
+  const doughnutLabel = {
+    id: 'centerTotalText',
+    afterDraw(chart, args, options) {
+      const { datasets } = chart.data;
+      const { color, font } = options;
+      const total = datasets[0].data.reduce((acc, value) => acc + value, 0);
+  
+      const { chartArea: { left, top, right, bottom }, ctx } = chart;
+      const centerX = (left + right) / 2;
+      const centerY = (top + bottom) / 2;
+  
+      ctx.fillStyle = color || '#3A2834';
+      ctx.font = `${font.weight || 'normal'} ${font.size || 12}px ${font.family || "'Fredoka', sans-serif"}`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(`Total: $${total}`, centerX, centerY);
+    }
+  };  
+
+  const plugin = {
+    id: 'emptyDoughnut',
+    afterDraw(chart, args, options) {
+      const {datasets} = chart.data;
+      const {color, width, radiusDecrease} = options;
+      let hasData = false;
+  
+      for (let i = 0; i < datasets.length; i += 1) {
+        const dataset = datasets[i];
+        hasData |= dataset.data.length > 0;
+      }
+  
+      if (!hasData) {
+        const {chartArea: {left, top, right, bottom}, ctx} = chart;
+        const centerX = (left + right) / 2;
+        const centerY = (top + bottom) / 2;
+        const r = Math.min(right - left, bottom - top) / 2;
+  
+        ctx.beginPath();
+        ctx.lineWidth = width || 2;
+        ctx.strokeStyle = color || '#3A2834';
+        ctx.arc(centerX, centerY, (r - radiusDecrease || 0), 0, 2 * Math.PI);
+        ctx.stroke();
+      }
+    }
+  };
+
+
   return (
     <div className='flex justify-center items-center rounded-md shadow-md bg-white mx-auto pb-4 pt-4 h-96'>
       <Doughnut
@@ -35,16 +82,29 @@ const PieChart = () => {
               '#00bcd4', // Cian
               '#009688', // Verde esmeralda
               '#4caf50', // Verde
-            ],      
-            hoverOffset: 8,            
-            spacing: 2,     
+            ],
+            usePointStyle: true,
+            hoverOffset: 8,
+            spacing: 2,
             borderColor: '#fff'
           }]
         }}
         options={{
-          responsive: true,          
+          responsive: true,
           maintainAspectRatio: true,
-          plugins: {
+          plugins: {     
+            centerTotalText:{
+              font: {
+                weight: 'normal',
+                size: 14,
+                family: "'Fredoka', 'sans-serif'",
+              },
+            },
+            emptyDoughnut: {              
+              color: '#3A2834',
+              width: 1,
+              radiusDecrease: 20
+            },            
             legend: {
               position: 'top',
               labels: {
@@ -53,26 +113,31 @@ const PieChart = () => {
                   size: 12,
                   family: "'Fredoka', 'sans-serif'",
                 },
-                boxWidth: 10,              
+                
+                boxWidth: 10,
+                pointStyle: 'rect',
                 usePointStyle: true,
               }
             },
             title: {
-              display:true,
+              display: true,
               text: "Análisis de gastos",
               color: '#2FAE7D',
-              font: {                
+              font: {
                 weight: 'bolder',
                 size: 22,
                 family: "'Fredoka', 'sans-serif'",
-              },    
+              },
               padding: {
                 top: 0,
-                bottom:10
+                bottom: 10
               }
             }
           }
         }}
+        plugins= {
+          [plugin, doughnutLabel]          
+        }
       />
     </div>
   )

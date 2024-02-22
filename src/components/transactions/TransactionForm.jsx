@@ -113,14 +113,14 @@ const TransactionForm = ({ onClose }) => {
     <div className=''>
       <div className='flex flex-col gap-2 w-full font-fredoka'>
         <button className='flex justify-end items-center py-0' onClick={handleOnCloseForm}>
-          <FontAwesomeIcon className='p-2 text-gray-400 hover:text-[#3A2834] hover:rounded-md hover:bg-slate-100 hover:transition-all hover:delay-100 hover:duration-100 w-[16px] h-[16px]' icon={faX}/>
+          <FontAwesomeIcon className='p-2 text-gray-400 hover:text-background-primary hover:rounded-md hover:bg-slate-100 hover:transition-all hover:delay-100 hover:duration-100 w-[16px] h-[16px]' icon={faX}/>
         </button>
         <h2 className='flex justify-start font-normal text-2xl'>Registrar una transacción</h2>
         <p className='text-start font-light text-gray-500 text-md lg:text-lg'>Rellene la siguiente información para registrar una nueva transacción</p>
         <form className='flex flex-col' ref={form} onSubmit={onSubmit}>
           <div className='group flex-col w-full justify-start gap-2 rounded-md py-3'>
             <input
-              className='rounded-md border-2 px-6 py-5 w-full font-medium bg-slate-100 text-gray-700 border-gray-200 focus-within:border-[#3A2834] focus-within:ring-1 focus-within:ring-[#3A2834] focus:outline-none'
+              className='rounded-md border-2 px-6 py-5 w-full font-medium bg-slate-100 text-gray-700 border-gray-200 focus-within:border-background-primary focus-within:ring-1 focus-within:ring-background-primary focus:outline-none'
               type="text"
               placeholder='Nombre'
               onChange={handleChangeNombre}
@@ -145,7 +145,7 @@ const TransactionForm = ({ onClose }) => {
           </div>
           <div className='group flex-col w-full justify-start gap-2 rounded-md py-3'>
             <input
-              className='rounded-md border-2 px-6 py-5 w-full font-medium bg-slate-100 text-gray-700 border-gray-200 focus-within:border-[#3A2834] focus-within:ring-1 focus-within:ring-[#3A2834] focus:outline-none'
+              className='rounded-md border-2 px-6 py-5 w-full font-medium bg-slate-100 text-gray-700 border-gray-200 focus-within:border-background-primary focus-within:ring-1 focus-within:ring-background-primary focus:outline-none'
               type="number"
               placeholder='Ingrese monto'
               onChange={handleChangeMonto}
@@ -168,15 +168,15 @@ const TransactionForm = ({ onClose }) => {
             </div>
           </div>
           <div className='flex justify-center items-center gap-2'>
-            <button className='rounded-md border px-4 py-5 focus:bg-[#40d64c]  hover:bg-[#40d64c]  border-gray-100   block mb-2 text-xl w-full group' type='button' onClick={() => handleChangeTipo('ingreso')}><FontAwesomeIcon className='group-focus:text-white group-hover:text-white text-green-400 px-2' icon={faArrowDown} /> Ingreso</button>
-            <button className='rounded-md border px-4 py-5 focus:bg-[#f85f5f] hover:bg-[#f85f5f]  border-gray-100   block mb-2 text-xl w-full group' type='button' onClick={() => handleChangeTipo('gasto')}><FontAwesomeIcon className='group-focus:text-white group-hover:text-white text-red-400 px-2' icon={faArrowUp} /> Gasto</button>
+            <button className='rounded-md border px-4 py-5 focus:bg-button-green  hover:bg-button-green  border-gray-100   block mb-2 text-xl w-full group' type='button' onClick={() => handleChangeTipo('ingreso')}><FontAwesomeIcon className='group-focus:text-white group-hover:text-white text-green-400 px-2' icon={faArrowDown} /> Ingreso</button>
+            <button className='rounded-md border px-4 py-5 focus:bg-button-red hover:bg-button-red  border-gray-100   block mb-2 text-xl w-full group' type='button' onClick={() => handleChangeTipo('gasto')}><FontAwesomeIcon className='group-focus:text-white group-hover:text-white text-red-400 px-2' icon={faArrowUp} /> Gasto</button>
           </div>
           <div className='w-full group flex-col py-3'>
             <select
               name=""
               id=""
               onChange={handleChangeCategoria}
-              className='group flex w-full px-6 py-5 cursor-pointer items-center justify-between rounded-md border-2 bg-slate-100 text-gray-700 shadow-sm outline-none transition-all duration-400 focus:border-[#3A2834] focus:ring-1 focus:ring-[#3A2834] hover:bg-white font-medium'
+              className='group flex w-full px-6 py-5 cursor-pointer items-center justify-between rounded-md border-2 bg-slate-100 text-gray-700 shadow-sm outline-none transition-all duration-400 focus:border-background-primary focus:ring-1 focus:ring-background-primary hover:bg-white font-medium'
               {...register('categoria', {
                 required: true,
                 minLength: {

@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 import { useGlobalState } from '../../context/GlobalState'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowDown, faArrowUp, faCheck, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faArrowDown, faArrowUp, faCheck, faXmark, faX } from '@fortawesome/free-solid-svg-icons'
 import { useForm } from 'react-hook-form'
 import { Toaster, toast } from 'sonner'
 
@@ -112,13 +112,15 @@ const TransactionForm = ({ onClose }) => {
   return (
     <div className=''>
       <div className='flex flex-col gap-2 w-full font-fredoka'>
-        <button className='flex justify-end items-center' onClick={handleOnCloseForm}>x</button>
-        <h2 className='flex justify-start font-semibold text-2xl'>Registrar una transacción</h2>
-        <p className='text-start font-light text-gray-500 text-lg'>Rellene la siguiente información para registrar una nueva transacción</p>
+        <button className='flex justify-end items-center py-0' onClick={handleOnCloseForm}>
+          <FontAwesomeIcon className='p-2 text-gray-400 hover:text-[#3A2834] hover:rounded-md hover:bg-slate-100 hover:transition-all hover:delay-100 hover:duration-100 w-[16px] h-[16px]' icon={faX}/>
+        </button>
+        <h2 className='flex justify-start font-normal text-2xl'>Registrar una transacción</h2>
+        <p className='text-start font-light text-gray-500 text-md lg:text-lg'>Rellene la siguiente información para registrar una nueva transacción</p>
         <form className='flex flex-col' ref={form} onSubmit={onSubmit}>
           <div className='group flex-col w-full justify-start gap-2 rounded-md py-3'>
             <input
-              className='rounded-md border px-6 py-5 w-full font-medium text-gray-700 border-gray-100 focus-within:border-[#3A2834] focus-within:ring-2 focus-within:ring-[#3A2834] focus:outline-none'
+              className='rounded-md border-2 px-6 py-5 w-full font-medium bg-slate-100 text-gray-700 border-gray-200 focus-within:border-[#3A2834] focus-within:ring-1 focus-within:ring-[#3A2834] focus:outline-none'
               type="text"
               placeholder='Nombre'
               onChange={handleChangeNombre}
@@ -143,7 +145,7 @@ const TransactionForm = ({ onClose }) => {
           </div>
           <div className='group flex-col w-full justify-start gap-2 rounded-md py-3'>
             <input
-              className='rounded-md border px-6 py-5 w-full font-medium text-gray-700 border-gray-100 focus-within:border-[#3A2834] focus-within:ring-2 focus-within:ring-[#3A2834] focus:outline-none'
+              className='rounded-md border-2 px-6 py-5 w-full font-medium bg-slate-100 text-gray-700 border-gray-200 focus-within:border-[#3A2834] focus-within:ring-1 focus-within:ring-[#3A2834] focus:outline-none'
               type="number"
               placeholder='Ingrese monto'
               onChange={handleChangeMonto}
@@ -174,7 +176,7 @@ const TransactionForm = ({ onClose }) => {
               name=""
               id=""
               onChange={handleChangeCategoria}
-              className='group flex w-full px-6 py-5 cursor-pointer items-center justify-between rounded-md border text-gray-700 shadow-sm outline-none transition-all duration-400 focus:border-[#3A2834] focus:ring-2 focus:ring-[#3A2834] hover:bg-white data-[state=open]:bg-white data-[placeholder]:text-[#3A2834] bg-white font-medium'
+              className='group flex w-full px-6 py-5 cursor-pointer items-center justify-between rounded-md border-2 bg-slate-100 text-gray-700 shadow-sm outline-none transition-all duration-400 focus:border-[#3A2834] focus:ring-1 focus:ring-[#3A2834] hover:bg-white font-medium'
               {...register('categoria', {
                 required: true,
                 minLength: {
@@ -184,7 +186,7 @@ const TransactionForm = ({ onClose }) => {
             >
               <option value="" disabled>Categoría</option>
               {categorias.map((cat) => (
-                <option key={cat} value={cat}>{cat}</option>
+                <option key={cat} value={cat} className='text-gray-800'>{cat}</option>
               ))}
             </select>
             <div className='flex justify-start text-red-600'>

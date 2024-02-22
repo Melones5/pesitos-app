@@ -116,7 +116,7 @@ const TransactionForm = ({ onClose }) => {
           <FontAwesomeIcon className='p-2 text-gray-400 hover:text-background-primary hover:rounded-md hover:bg-slate-100 hover:transition-all hover:delay-100 hover:duration-100 w-[16px] h-[16px]' icon={faX}/>
         </button>
         <h2 className='flex justify-start font-normal text-2xl'>Registrar una transacción</h2>
-        <p className='text-start font-light text-gray-500 text-md lg:text-lg'>Rellene la siguiente información para registrar una nueva transacción</p>
+        <p className='text-start font-light text-gray-500 text-md lg:text-lg'>Complete los campos para registrar un nuevo movimiento financiero</p>
         <form className='flex flex-col' ref={form} onSubmit={onSubmit}>
           <div className='group flex-col w-full justify-start gap-2 rounded-md py-3'>
             <input

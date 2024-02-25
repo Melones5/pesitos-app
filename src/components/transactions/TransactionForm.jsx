@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowDown, faArrowUp, faCheck, faXmark, faX } from '@fortawesome/free-solid-svg-icons'
 import { useForm } from 'react-hook-form'
 import { Toaster, toast } from 'sonner'
-
+// import DatePicker from '../DatePicker/DatePicker'
 
 
 const TransactionForm = ({ onClose }) => {
@@ -194,6 +194,9 @@ const TransactionForm = ({ onClose }) => {
               {errors.categoria?.type === 'minLength' && <p className='text-danger text-small d-block mb-2'>El campo categoria debe tener al menos 1</p>}
             </div>
           </div>
+          {/* <div>
+            <DatePicker selected/>
+          </div> */}
           <button
             className='rounded-md border px-4 py-5 bg-green-600 hover:bg-green-500 text-white w-full text-xl'>
             Añade una transacción

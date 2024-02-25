@@ -44,30 +44,19 @@ const TransactionList = () => {
         {transactions.map((transaction) => (
           <div className='border-b-2 font-bold font-jost p-3 mt-3 rounded-md shadow-md bg-white' key={transaction.id}>
             <li className='flex items-center'>
-              {transaction.tipo === 'ingreso' ? (
-                <div className='flex justify-between w-full'>
-                  <div className='flex items-center'>
-                    {getCategoryIcon(transaction.categoria)}
-                    <span className='pl-5 text-gray-700'>{transaction.categoria}</span>
-                  </div>
-                  <div className='flex items-center justify-center'>
-                    <p className='text-green-400'>${transaction.monto}</p>
-                  </div>
-                  {/* <span>{transation.tipo}</span> */}
+              <div className='flex justify-between w-full'>
+                <div className='flex items-center'>
+                  {getCategoryIcon(transaction.categoria)}
+                  <span className='pl-5 text-gray-700'>{transaction.categoria}</span>
                 </div>
-              )
-                : (
-                  <div className='flex justify-between w-full'>
-                    <div className='flex items-center'>
-                      {getCategoryIcon(transaction.categoria)}
-                      <span className='pl-5 text-gray-700'>{transaction.categoria}</span>
-                    </div>
-                    <div className='flex items-center justify-center'>
-                      <p className='text-red-400'>${transaction.monto}</p>
-                    </div>
-                    {/* <span>{transation.tipo}</span> */}
-                  </div>
-                )}
+                <div className='flex items-center justify-center'>
+                  {transaction.tipo === 'ingreso' ? (
+                    <p className='text-green-400'>${transaction.monto}</p>
+                  ) : (
+                    <p className='text-red-400'>${transaction.monto}</p>
+                  )}
+                </div>
+              </div>
             </li>
           </div>
         ))

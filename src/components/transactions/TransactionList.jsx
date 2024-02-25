@@ -40,6 +40,7 @@ const TransactionList = () => {
 
   return (
     <div className='py-6'>
+      {/* <ul className='hidden md:flex md:flex-col'> */}
       <ul>
         {transactions.map((transaction) => (
           <div className='border-b-2 font-bold font-jost p-3 mt-3 rounded-md shadow-md bg-white' key={transaction.id}>
@@ -62,6 +63,31 @@ const TransactionList = () => {
         ))
         }
       </ul>
+      {/* Different layout md:breakpoint 
+      <div className='mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 md:hidden'>
+        {transactions.map((transaction) => (
+          <div className='px-6 py-5 ring-1 ring-black ring-opacity-5 border-b-2 font-bold font-jost rounded-md shadow-md bg-white'>
+            <div className='flex items-center justify-between'>
+              <div className='flex items-center justify-center'>
+                <span>{getCategoryIcon(transaction.categoria)}</span>
+                <span className='pl-2'>{transaction.nombre}</span>
+              </div>
+              <p>Eliminar</p>
+            </div>
+            <div>
+              {transaction.tipo === 'ingreso' ? (
+                <p className='text-green-400'>${transaction.monto}</p>
+              ) : (
+                <p className='text-red-400'>- ${transaction.monto}</p>
+              )}
+            </div>
+            <div className='mt-3 flex justify-between'>
+              <p className='text-gray-500 font-normal'>{transaction.categoria}</p>          
+              <p className='text-gray-500 font-normal'>Fecha</p>    
+            </div>
+          </div>
+        ))}
+      </div>*/}
     </div>
   )
 }

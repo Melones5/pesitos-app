@@ -4,11 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowDown, faArrowUp, faCheck, faXmark, faX } from '@fortawesome/free-solid-svg-icons'
 import { useForm } from 'react-hook-form'
 import { Toaster, toast } from 'sonner'
-// import DatePicker from '../DatePicker/DatePicker'
+import DatePicker from '../DatePicker/DatePicker'
 
 
 const TransactionForm = ({ onClose }) => {
 
+  
   const {
     register,
     handleSubmit,
@@ -21,6 +22,7 @@ const TransactionForm = ({ onClose }) => {
       monto: "",
       tipo: "",
       categoria: "",
+      date:"" ,
     },
   });
 
@@ -33,6 +35,7 @@ const TransactionForm = ({ onClose }) => {
   const [monto, setMonto] = useState(0);
   const [tipo, setTipo] = useState("");
   const [categoria, setCategoría] = useState("");
+  const [date, setDate] = useState(new Date());
 
   const handleChangeNombre = (e) => {
     console.log(e.target.value)
@@ -54,6 +57,12 @@ const TransactionForm = ({ onClose }) => {
     console.log(e.target.value)
     setCategoría(e.target.value)
   }
+
+  const handleChangeDate = (selectedDate) => {
+    console.log(selectedDate)
+    setDate(selectedDate)
+  }
+
 
   const categorias = [
     'Sueldo',
@@ -77,6 +86,7 @@ const TransactionForm = ({ onClose }) => {
     data.id = window.crypto.randomUUID(),
     data.tipo = tipo,
     data.monto = +data.monto
+    data.date = date
     try {
       addTransaction(data)     
       toast.success('Transacción añadida', {
@@ -116,9 +126,9 @@ const TransactionForm = ({ onClose }) => {
           <FontAwesomeIcon className='p-2 text-gray-400 hover:text-background-primary hover:rounded-md hover:bg-slate-100 hover:transition-all hover:delay-100 hover:duration-100 w-[16px] h-[16px]' icon={faX}/>
         </button>
         <h2 className='flex justify-start font-normal text-2xl'>Registrar una transacción</h2>
-        <p className='text-start font-light text-gray-500 text-md lg:text-lg'>Complete los campos para registrar un nuevo movimiento financiero</p>
+        <p className='text-start font-light text-gray-500 text-md lg:text-lg mb-2'>Complete los campos para registrar un nuevo movimiento financiero</p>
         <form className='flex flex-col gap-3 sm:gap-4' ref={form} onSubmit={onSubmit}>
-          <div className='group flex-col w-full justify-start gap-2 rounded-md py-3'>
+          <div className='group flex-col w-full justify-start gap-2 rounded-md'>
             <input
               className='rounded-md border-2 px-6 py-5 w-full font-medium bg-slate-100 text-gray-700 border-gray-200 focus-within:border-background-primary focus-within:ring-1 focus-within:ring-background-primary focus:outline-none'
               type="text"
@@ -143,11 +153,11 @@ const TransactionForm = ({ onClose }) => {
               )}
             </div>
           </div>
-          <div className='group flex-col w-full justify-start gap-2 rounded-md py-3'>
+          <div className='group flex-col w-full justify-start gap-2 rounded-md'>
             <input
               className='rounded-md border-2 px-6 py-5 w-full font-medium bg-slate-100 text-gray-700 border-gray-200 focus-within:border-background-primary focus-within:ring-1 focus-within:ring-background-primary focus:outline-none'
               type="number"
-              placeholder='Ingrese monto'
+              placeholder='$ 0,00'
               onChange={handleChangeMonto}
               defaultValue="0"
               min="0"
@@ -168,10 +178,11 @@ const TransactionForm = ({ onClose }) => {
             </div>
           </div>
           <div className='flex justify-center items-center gap-2'>
-            <button className='rounded-md border px-4 py-5 focus:bg-button-green  hover:bg-button-green  border-gray-100   block mb-2 text-md w-full group' type='button' onClick={() => handleChangeTipo('ingreso')}><FontAwesomeIcon className='group-focus:text-white group-hover:text-white text-green-400 px-2' icon={faArrowDown} /> Ingreso</button>
-            <button className='rounded-md border px-4 py-5 focus:bg-button-red hover:bg-button-red  border-gray-100   block mb-2 text-md w-full group' type='button' onClick={() => handleChangeTipo('gasto')}><FontAwesomeIcon className='group-focus:text-white group-hover:text-white text-red-400 px-2' icon={faArrowUp} /> Gasto</button>
+            <button className='rounded-md border px-4 py-5 focus:bg-button-green  hover:bg-button-green  border-gray-100   block mb-2 text-md w-full group transition-all duration-400 bg-green-75 ' type='button' onClick={() => handleChangeTipo('ingreso')}
+            ><FontAwesomeIcon className='group-focus:text-white group-hover:text-white text-green-400 px-2' icon={faArrowDown} /> Ingreso</button>
+            <button className='rounded-md border px-4 py-5 focus:bg-button-red hover:bg-button-red  border-gray-100   block mb-2 text-md w-full group transition-all duration-400' type='button' onClick={() => handleChangeTipo('gasto')}><FontAwesomeIcon className='group-focus:text-white group-hover:text-white text-red-400 px-2' icon={faArrowUp} /> Gasto</button>
           </div>
-          <div className='w-full group flex-col py-3'>
+          <div className='w-full group flex-col'>
             <select
               name=""
               id=""
@@ -195,9 +206,12 @@ const TransactionForm = ({ onClose }) => {
               {errors.categoria?.type === 'minLength' && <p>El campo categoria debe tener al menos 1</p>}
             </div>
           </div>
-          {/* <div>
-            <DatePicker selected/>
-          </div> */}
+          <div>
+            <DatePicker 
+              selectedDate={date}
+              onDateChange={handleChangeDate}
+            />
+          </div>
           <button
             className='rounded-md border px-4 py-5 bg-green-600 hover:bg-green-500 text-white w-full text-xl'>
             Añade una transacción

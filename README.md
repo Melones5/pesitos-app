@@ -19,7 +19,7 @@
 - El proyecto Pesitos puede ser un proyecto simple, pero cubrió conceptos importantes para el desarrollo de aplicaciones web con React.
 - Se hizo uso de React con javascript como tecnologías principales.
 - Vite y Tailwind css también fueron implementados en el mismo.
-- Pantalla "inicio"
+- **Pantalla "inicio"**
 <div align="center" >
       <img src="/public/inicio.png" width="1000" alt="Logo">
 </div>
@@ -49,7 +49,7 @@ Para visualizar el funcionamiento, se dejan a continuación una serie de gifs qu
 - Cálculo del total de ingresos.
 - Cálculo del total de gastos.
 - Cálculo del balance (ingresos-gastos).
-- Gráfico de torta con el uso de Chartjs.
+- Gráfico de torta con el uso de **Chartjs**.
 - Eliminación de transacciónes.
 
 ### ¿Qué aprendí? 🧐
@@ -82,7 +82,7 @@ Para visualizar el funcionamiento, se dejan a continuación una serie de gifs qu
 - Vite
 - NPM
 - Yup
-- DayPicker
+- **DayPicker**
   <div align="center" >
       <img src="/public/datePickerD.png" width="1000" alt="Logo">
       <img src="/public/datePickerM.png" width="280" alt="Logo">

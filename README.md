@@ -1,3 +1,7 @@
+<div aling='center'>
+  ![](src/assets/logo.png)
+</div>
+
 # Pesitos - https://pesitos-app.netlify.app/
 
 ## Pesitos

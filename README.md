@@ -1,5 +1,5 @@
 <div align="center">
-  ![](src/assets/logo.png)
+  <img src="/public/logo.png" width="200" alt="Logo">
 </div>
 
 # Pesitos - https://pesitos-app.netlify.app/
@@ -11,20 +11,36 @@
 - El sitio está publicado en **[Netlify](https://www.netlify.com/)**.
 - Ingresa al proyecto a través de este link: **<https://pesitos-app.netlify.app///>** 
 
+
 ---
+
+
 ## ❕ Sobre el proyecto 
 - El proyecto Pesitos puede ser un proyecto simple, pero cubrió conceptos importantes para el desarrollo de aplicaciones web con React.
 - Se hizo uso de React con javascript como tecnologías principales.
 - Vite y Tailwind css también fueron implementados en el mismo.
 - Pantalla "inicio"
-- FOTO
+<div align="center" >
+      <img src="/public/inicio.png" width="1000" alt="Logo">
+</div>
+
+
 ---
+
+
 ## ⚙ Visualización de funcionamiento
 
 Para visualizar el funcionamiento, se dejan a continuación una serie de gifs que muestran de manera resumida el funcionamiento del proyecto.
 
-GIF
+<div align="center" >
+      <img src="/public/inicioD.gif" width="1000" alt="Logo">
+      <img src="/public/inicioMobile.gif" width="1000" alt="Logo">
+</div>
+
+
 ---
+
+
 ## ❔ ¿De dónde nace la idea del proyecto?
 - Este proyecto nace como algo personal para llevar el control de los gastos / ingresos.
 
@@ -43,8 +59,16 @@ GIF
 - Creación de inputs personalizados para ingresar una fecha.
 - Uso de Sonner para mostrar toast personalizados.
 - Uso de react-hook-form para el formulario de registro de transacciones.}
-- FOTOS DE LAS REGISTRO DE TRANSACCIONES
+- REGISTRO DE TRANSACCIONES
+
+<div align="center" >
+      <img src="/public/Modal.png" width="1000" alt="Logo">
+      <img src="/public/ModalError.png" width="1000" alt="Logo">
+</div>
+  
 ---
+
+
 ## 👽 Tecnologías utilizadas
 - Chartjs
 - Date FNS
@@ -60,13 +84,25 @@ GIF
 - Vite
 - NPM
 - Yup
+
+
 ---
+
+
 ## 💻 Requisitos mínimos
 - NodeJS
 - ReactJS
 - Vite
 - NPM
----
-## 📱 Diseño responsivo
-IMÁGENES
 
+
+---
+
+
+## 📱 Diseño responsivo
+
+<div align="center" >
+      <img src="/public/Mobile1.png" width="280" alt="Logo">
+      <img src="/public/Mobile2.png" width="280" alt="Logo">
+      <img src="/public/Mobile3.png" width="280" alt="Logo">
+</div>

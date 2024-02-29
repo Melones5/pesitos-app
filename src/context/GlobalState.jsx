@@ -32,6 +32,13 @@ export const GlobalState = ({children}) => {
     console.log("addTransaction", data)
   }  
 
+  const deleteTransaction = (id) =>{
+    dispatch({
+      type: 'DELETE_TRANSACTION',
+      payload: id
+    })    
+  }  
+
   const calculateTotalIncome = () => {
     // Filtra las transacciones que son ingresos
     const incomeTransactions = state.transactions.filter(transaction => transaction.tipo === 'ingreso');
@@ -61,6 +68,7 @@ export const GlobalState = ({children}) => {
     <Context.Provider value={{
       transactions: state.transactions,
       addTransaction,
+      deleteTransaction,
       calculateTotalIncome,
       calculateTotalExpense,
       calculateBalance

@@ -22,7 +22,7 @@ const TransactionForm = ({ onClose }) => {
       monto: "",
       tipo: "",
       categoria: "",
-      date:"" ,
+      fecha:"" ,
     },
   });
 
@@ -35,7 +35,7 @@ const TransactionForm = ({ onClose }) => {
   const [monto, setMonto] = useState(0);
   const [tipo, setTipo] = useState("");
   const [categoria, setCategoría] = useState("");
-  const [date, setDate] = useState(new Date());
+  const [fecha, setFecha] = useState(new Date());
 
   const handleChangeNombre = (e) => {
     console.log(e.target.value)
@@ -60,7 +60,7 @@ const TransactionForm = ({ onClose }) => {
 
   const handleChangeDate = (selectedDate) => {
     console.log(selectedDate)
-    setDate(selectedDate)
+    setFecha(selectedDate)
   }
 
 
@@ -86,7 +86,7 @@ const TransactionForm = ({ onClose }) => {
     data.id = window.crypto.randomUUID(),
     data.tipo = tipo,
     data.monto = +data.monto
-    data.date = date
+    data.fecha = fecha
     try {
       addTransaction(data)     
       toast.success('Transacción añadida', {
@@ -208,7 +208,7 @@ const TransactionForm = ({ onClose }) => {
           </div>
           <div>
             <DatePicker 
-              selectedDate={date}
+              selectedDate={fecha}
               onDateChange={handleChangeDate}
             />
           </div>

@@ -1,6 +1,6 @@
 <div aling='center'>
-  ![](src/assets/logo.png)
 </div>
+  ![](src/assets/logo.png)
 
 # Pesitos - https://pesitos-app.netlify.app/
 

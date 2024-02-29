@@ -19,7 +19,7 @@
 - El proyecto Pesitos puede ser un proyecto simple, pero cubrió conceptos importantes para el desarrollo de aplicaciones web con React.
 - Se hizo uso de React con javascript como tecnologías principales.
 - Vite y Tailwind css también fueron implementados en el mismo.
-- **Home Page**
+- **Homepage**
 <div align="center" >
       <img src="/public/inicio.png" width="1000" alt="Logo">
 </div>

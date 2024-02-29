@@ -100,5 +100,9 @@ Para visualizar el funcionamiento, se dejan a continuación una serie de gifs qu
 
 
 ## 📱 Diseño responsivo
-IMÁGENES
 
+<div align="center" >
+      <img src="/public/Mobile1.png" width="280" alt="Logo">
+      <img src="/public/Mobile2.png" width="280" alt="Logo">
+      <img src="/public/Mobile3.png" width="280" alt="Logo">
+</div>

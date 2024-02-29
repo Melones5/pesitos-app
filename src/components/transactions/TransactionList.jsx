@@ -102,7 +102,13 @@ const TransactionList = () => {
         }
       </ul>
       {/* Different layout md:breakpoint  */}
-      <div className='mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 md:hidden'>
+      <div className='mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 md:hidden'>
+        {/* Si el array de transactions es mayor a cero, muestro el parrafo con la lista  */}
+        {transactions.length > 0 && (
+          <p className='mt-0 font-jost font-semibold text-background-primary flex items-center justify-center uppercase'>
+            Lista de gastos / ingresos 👇 {transactions.length}
+          </p>
+        )}
         {transactions.map((transaction) => (
           <div className='px-6 py-5 ring-1 ring-black ring-opacity-5 border-b-2 font-bold font-jost rounded-md shadow-md bg-white' key={transaction.id}>
             <div className='flex items-center justify-between'>
@@ -114,7 +120,7 @@ const TransactionList = () => {
                 <FontAwesomeIcon className='p-1 rounded-lg hover:brightness-150  border-pie-teal transition-all duration-400 text-gray-500 w-[12px] h-[12px]' icon={faTrash} />
               </button>
             </div>
-            <div>
+            <div className='mt-1'>
               {transaction.tipo === 'ingreso' ? (
                 <p className='text-green-400'>${transaction.monto}</p>
               ) : (

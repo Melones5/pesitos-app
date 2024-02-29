@@ -181,7 +181,7 @@ const TransactionForm = ({ onClose }) => {
               name=""
               id=""
               onChange={handleChangeCategoria}
-              className='group flex w-full px-6 py-5 cursor-pointer items-center justify-between rounded-md border-2 bg-slate-100 text-gray-700 shadow-sm outline-none transition-all duration-400 focus:border-background-primary focus:ring-1 focus:ring-background-primary hover:bg-white font-medium'
+              className='group flex w-full px-6 py-5 cursor-pointer items-center justify-between rounded-md border-2 bg-slate-100 text-gray-700 shadow-sm outline-none transition-all duration-400 focus:border-background-primary focus:ring-1 focus:ring-background-primary hover:bg-white font-medium appearance-none group'
               data-state=''
               {...register('categoria', {
                 required: true,
@@ -192,7 +192,7 @@ const TransactionForm = ({ onClose }) => {
             >
               <option value="" disabled>Categoría</option>
               {categorias.map((cat) => (
-                <option key={cat} value={cat} className='text-gray-800'>{cat}</option>
+                <option key={cat} value={cat} className='font-bold text-sm text-background-primary'>{cat}</option>
               ))}
             </select>
             <div className='flex justify-start text-red-600 text-sm mt-1'>

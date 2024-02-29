@@ -72,11 +72,6 @@ Para visualizar el funcionamiento, se dejan a continuación una serie de gifs qu
 ## 👽 Tecnologías utilizadas
 - Chartjs
 - Date FNS
-- DayPicker
-  <div align="center" >
-      <img src="/public/datePickerD.png" width="1000" alt="Logo">
-      <img src="/public/datePickerM.png" width="280" alt="Logo">
-  </div>
 - Sonner
 - JavaScript
 - Netlify
@@ -87,6 +82,11 @@ Para visualizar el funcionamiento, se dejan a continuación una serie de gifs qu
 - Vite
 - NPM
 - Yup
+- DayPicker
+  <div align="center" >
+      <img src="/public/datePickerD.png" width="1000" alt="Logo">
+      <img src="/public/datePickerM.png" width="280" alt="Logo">
+  </div>
 
 
 ---

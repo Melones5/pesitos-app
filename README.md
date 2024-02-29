@@ -12,6 +12,7 @@
 - Ingresa al proyecto a través de este link: **<https://pesitos-app.netlify.app///>** 
 
 ---
+
 ## ❕ Sobre el proyecto 
 - El proyecto Pesitos puede ser un proyecto simple, pero cubrió conceptos importantes para el desarrollo de aplicaciones web con React.
 - Se hizo uso de React con javascript como tecnologías principales.
@@ -20,10 +21,17 @@
 <div align="center" >
       <img src="/public/inicio.png" width="1000" alt="Logo">
 </div>
+
 ---
+
 ## ⚙ Visualización de funcionamiento
 
 Para visualizar el funcionamiento, se dejan a continuación una serie de gifs que muestran de manera resumida el funcionamiento del proyecto.
+
+<div align="center" >
+      <img src="/public/inicioD.gif" width="1000" alt="Logo">
+      <img src="/public/inicioMobile.gif" width="1000" alt="Logo">
+</div>
 
 GIF
 ---

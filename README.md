@@ -59,8 +59,16 @@ Para visualizar el funcionamiento, se dejan a continuación una serie de gifs qu
 - Creación de inputs personalizados para ingresar una fecha.
 - Uso de Sonner para mostrar toast personalizados.
 - Uso de react-hook-form para el formulario de registro de transacciones.}
-- FOTOS DE LAS REGISTRO DE TRANSACCIONES
+- REGISTRO DE TRANSACCIONES
+
+<div align="center" >
+      <img src="/public/Modal.png" width="1000" alt="Logo">
+      <img src="/public/ModalError.png" width="1000" alt="Logo">
+</div>
+  
 ---
+
+
 ## 👽 Tecnologías utilizadas
 - Chartjs
 - Date FNS

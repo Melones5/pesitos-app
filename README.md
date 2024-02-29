@@ -18,7 +18,7 @@
 - Vite y Tailwind css también fueron implementados en el mismo.
 - Pantalla "inicio"
 <div align="center" >
-      ![inicio](public/inicio.png)
+      ![inicio](public/inicio.PNG)
 </div>
 ---
 ## ⚙ Visualización de funcionamiento

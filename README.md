@@ -19,7 +19,7 @@
 - El proyecto Pesitos puede ser un proyecto simple, pero cubrió conceptos importantes para el desarrollo de aplicaciones web con React.
 - Se hizo uso de React con javascript como tecnologías principales.
 - Vite y Tailwind css también fueron implementados en el mismo.
-- **Pantalla "inicio"**
+- **Home Page"**
 <div align="center" >
       <img src="/public/inicio.png" width="1000" alt="Logo">
 </div>
@@ -59,7 +59,7 @@ Para visualizar el funcionamiento, se dejan a continuación una serie de gifs qu
 - Creación de inputs personalizados para ingresar una fecha.
 - Uso de Sonner para mostrar toast personalizados.
 - Uso de react-hook-form para el formulario de registro de transacciones.}
-- REGISTRO DE TRANSACCIONES
+- **MODAL DE TRANSACCIONES**
 
 <div align="center" >
       <img src="/public/Modal.png" width="1000" alt="Logo">
@@ -70,19 +70,19 @@ Para visualizar el funcionamiento, se dejan a continuación una serie de gifs qu
 
 
 ## 👽 Tecnologías utilizadas
-- Chartjs
-- Date FNS
-- Sonner
-- JavaScript
-- Netlify
-- NodeJS
-- React
-- React Hook Form
-- TailwindCSS
-- Vite
-- NPM
-- Yup
-- **DayPicker**
+1. **Chartjs**
+2. **Date FNS**
+3. **Sonner**
+4. **JavaScript**
+5. **Netlify**
+6. **NodeJS**
+7. **React**
+8. **React Hook Form**
+9. **TailwindCSS**
+10. **Vite**
+11. **NPM**
+12. **Yup**
+13. **DayPicker**
   <div align="center" >
       <img src="/public/datePickerD.png" width="1000" alt="Logo">
       <img src="/public/datePickerM.png" width="280" alt="Logo">
@@ -93,10 +93,10 @@ Para visualizar el funcionamiento, se dejan a continuación una serie de gifs qu
 
 
 ## 💻 Requisitos mínimos
-- NodeJS
-- ReactJS
-- Vite
-- NPM
+- **NodeJS**
+- **ReactJS**
+- **Vite**
+- **NPM**
 
 
 ---

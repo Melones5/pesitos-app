@@ -8,3 +8,6 @@
 - Ingresa al proyecto a través de este link: **<https://pesitos-app.netlify.app///>** 
 
 ---
+<div align="center">
+    <img src="https://imgur.com/a/D5LtiO8" width="700" alt="Gif mostrando el proyecto">
+</div>

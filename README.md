@@ -33,8 +33,8 @@
 Para visualizar el funcionamiento, se dejan a continuación una serie de gifs que muestran de manera resumida el funcionamiento del proyecto.
 
 <div align="center" >
-      <img src="/public/inicioD.gif" width="800" alt="Logo">
-      <img src="/public/inicioMobile.gif" width="800" alt="Logo">
+      <img src="/public/inicioD.gif" width="1000" alt="Logo">
+      <img src="/public/inicioMobile.gif" width="1000" alt="Logo">
 </div>
 
 

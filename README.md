@@ -1,8 +1,8 @@
-# React + Vite
+# Pesitos - https://pesitos-app.netlify.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Pesitos
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Este proyecto es una plataforma que registra las transacciones monetarias, calcula los saldos, el total tanto de entradas como de salidas y las lista con el período de tiempo en el cual se desarrollaron las mismas.
+- Los datos quedan guardados en el localStorage del navegador.
+- El sitio está publicado en **[Netlify](https://www.netlify.com/)**.
+- Ingresa al proyecto a través de este link: **<https://pesitos-app.netlify.app///>** 

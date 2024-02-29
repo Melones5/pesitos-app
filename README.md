@@ -6,3 +6,5 @@
 - Los datos quedan guardados en el localStorage del navegador.
 - El sitio está publicado en **[Netlify](https://www.netlify.com/)**.
 - Ingresa al proyecto a través de este link: **<https://pesitos-app.netlify.app///>** 
+
+---

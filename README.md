@@ -73,7 +73,10 @@ Para visualizar el funcionamiento, se dejan a continuación una serie de gifs qu
 - Chartjs
 - Date FNS
 - DayPicker
-  IMÁGEN
+  <div align="center" >
+      <img src="/public/datePickerD.png" width="1000" alt="Logo">
+      <img src="/public/datePickerM.png" width="1000" alt="Logo">
+  </div>
 - Sonner
 - JavaScript
 - Netlify

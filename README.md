@@ -1,5 +1,5 @@
 <div aling='center'>
-  ![](src/public/vite.svg)
+  ![](public/vite.svg)
 </div>
 
 # Pesitos - https://pesitos-app.netlify.app/

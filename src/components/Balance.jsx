@@ -8,20 +8,6 @@ const Balance = () => {
 
   const { calculateTotalIncome, calculateTotalExpense, calculateBalance } = useGlobalState();
 
-  // //Recorro el array de transactions y creo uno nuevo con los montos
-  // const montos = transactions.map(transaction => transaction.monto)
-
-  // //utilizo el reduce para obtener el total de la diferencia entre gastos y ingresos
-  // const total = montos.reduce((acc, item) => (acc += item), 0).toFixed(2)
-
-  //filtro por ingresos
-  // const ingresos = transactions.filter(transaction => transaction.tipo === 'ingreso')
-  // const totalIngresos = ingresos.reduce((acc, item) => (acc += item.monto), 0).toFixed(2)
-
-  //filtro por gasto
-  // const gastos = transactions.filter(transaction => transaction.tipo === 'gasto')
-  // const totalGastos = gastos.reduce((acc, item) => (acc += item.monto), 0).toFixed(2)
-
   const totalIngresos = calculateTotalIncome();
   const totalGastos = calculateTotalExpense();
   const total = calculateBalance();

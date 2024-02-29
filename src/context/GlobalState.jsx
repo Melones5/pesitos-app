@@ -57,10 +57,6 @@ export const GlobalState = ({children}) => {
 
   const calculateBalance = () => {
     const total = (calculateTotalIncome() - calculateTotalExpense()).toFixed(2)
-    // //Recorro el array de transactions y creo uno nuevo con los montos
-    // const montos = state.transactions.map(transaction => transaction.monto)
-    // //utilizo el reduce para obtener el total de la diferencia entre gastos y ingresos
-    // const total = montos.reduce((acc, item) => (acc += item), 0).toFixed(2)
     return total;
   }
 

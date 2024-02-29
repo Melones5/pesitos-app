@@ -37,32 +37,26 @@ const TransactionForm = ({ onClose }) => {
   const [categoria, setCategoría] = useState("");
   const [fecha, setFecha] = useState(new Date());
 
-  const handleChangeNombre = (e) => {
-    console.log(e.target.value)
+  const handleChangeNombre = (e) => {    
     setNombre(e.target.value)
   }
 
-  const handleChangeMonto = (e) => {
-    console.log(e.target.value)
+  const handleChangeMonto = (e) => {    
     setMonto(e.target.value)
   }
 
   const handleChangeTipo = (value) => {
-    // modo botón
-    console.log(value)
+    // modo botón    
     setTipo(value)
   }
 
-  const handleChangeCategoria = (e) => {
-    console.log(e.target.value)
+  const handleChangeCategoria = (e) => {    
     setCategoría(e.target.value)
   }
 
-  const handleChangeDate = (selectedDate) => {
-    console.log(selectedDate)
+  const handleChangeDate = (selectedDate) => {    
     setFecha(selectedDate)
   }
-
 
   const categorias = [
     'Sueldo',

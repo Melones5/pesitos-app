@@ -1,5 +1,4 @@
 import React from 'react'
-import TransactionForm from '../transactions/TransactionForm'
 import TransactionList from '../transactions/TransactionList'
 import Balance from '../Balance'
 import PieChart from '../PieChart'
@@ -10,7 +9,6 @@ const Main = () => {
       <PieChart />
       <Balance />      
       <TransactionList />
-      {/* <TransactionForm /> */}
     </div>
   )
 }

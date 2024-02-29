@@ -20,7 +20,7 @@
 Para visualizar el funcionamiento, se dejan a continuación una serie de gifs que muestran de manera resumida el funcionamiento del proyecto.
 
 GIF
-
+---
 ## ❔ ¿De dónde nace la idea del proyecto?
 - Este proyecto nace como algo personal para llevar el control de los gastos / ingresos.
 
@@ -40,7 +40,7 @@ GIF
 - Uso de Sonner para mostrar toast personalizados.
 - Uso de react-hook-form para el formulario de registro de transacciones.}
 - FOTOS DE LAS REGISTRO DE TRANSACCIONES
-
+---
 ## 👽 Tecnologías utilizadas
 - Chartjs
 - Date FNS
@@ -56,13 +56,13 @@ GIF
 - Vite
 - NPM
 - Yup
-
+---
 ## 💻 Requisitos mínimos
 - NodeJS
 - ReactJS
 - Vite
 - NPM
-
+---
 ## 📱 Diseño responsivo
 IMÁGENES
 

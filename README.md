@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="/public/logo.png" width="1000" alt="Logo">
+  <img src="/public/logo.png" width="100" alt="Logo">
 </div>
 
 # Pesitos - https://pesitos-app.netlify.app/

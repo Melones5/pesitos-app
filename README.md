@@ -11,7 +11,9 @@
 - El sitio está publicado en **[Netlify](https://www.netlify.com/)**.
 - Ingresa al proyecto a través de este link: **<https://pesitos-app.netlify.app///>** 
 
+
 ---
+
 
 ## ❕ Sobre el proyecto 
 - El proyecto Pesitos puede ser un proyecto simple, pero cubrió conceptos importantes para el desarrollo de aplicaciones web con React.
@@ -22,7 +24,9 @@
       <img src="/public/inicio.png" width="1000" alt="Logo">
 </div>
 
+
 ---
+
 
 ## ⚙ Visualización de funcionamiento
 
@@ -33,8 +37,10 @@ Para visualizar el funcionamiento, se dejan a continuación una serie de gifs qu
       <img src="/public/inicioMobile.gif" width="1000" alt="Logo">
 </div>
 
-GIF
+
 ---
+
+
 ## ❔ ¿De dónde nace la idea del proyecto?
 - Este proyecto nace como algo personal para llevar el control de los gastos / ingresos.
 
@@ -70,13 +76,21 @@ GIF
 - Vite
 - NPM
 - Yup
+
+
 ---
+
+
 ## 💻 Requisitos mínimos
 - NodeJS
 - ReactJS
 - Vite
 - NPM
+
+
 ---
+
+
 ## 📱 Diseño responsivo
 IMÁGENES
 

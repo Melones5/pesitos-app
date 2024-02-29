@@ -17,7 +17,9 @@
 - Se hizo uso de React con javascript como tecnologías principales.
 - Vite y Tailwind css también fueron implementados en el mismo.
 - Pantalla "inicio"
-- FOTO
+<div align="center" >
+      ![](public/inicio.png)
+</div>
 ---
 ## ⚙ Visualización de funcionamiento
 

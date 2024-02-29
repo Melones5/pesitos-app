@@ -14,7 +14,21 @@ const PieChart = () => {
   const labels = groupedData.map((item) => item.category); //los labels en categorías
   const data = groupedData.map((item) => item.amount); // los labels por monto
 
-  console.log(labels, data)
+  const categoryColors = {
+    'Sueldo':  '#f44336', // Rojo,
+    'Compras': '#e91e63', // Rosa fuerte,
+    'Entretenimientos': '#9c27b0', // Púrpura,
+    'Restaurantes y bares': '#673ab7', // Azul violeta,
+    'Salud y deporte': '#3f51b5', // Azul índigo,
+    'Varios': '#2196f3', // Azul,
+    'Servicios': '#03a9f4', // Azul cielo,
+    'Supermercado': '#00bcd4', // Cian,
+    'Transporte': '#009688', // Verde esmeralda,
+    'Vacaciones': '#4caf50' // Verde
+  };
+
+  // Mapear las categorías a los colores correspondientes
+  const backgroundColors = labels.map(category => categoryColors[category]);
 
   const doughnutLabel = {
     id: 'centerTotalText',
@@ -22,37 +36,37 @@ const PieChart = () => {
       const { datasets } = chart.data;
       const { color, font } = options;
       const total = datasets[0].data.reduce((acc, value) => acc + value, 0);
-  
+
       const { chartArea: { left, top, right, bottom }, ctx } = chart;
       const centerX = (left + right) / 2;
       const centerY = (top + bottom) / 2;
-  
+
       ctx.fillStyle = color || '#3A2834';
       ctx.font = `${font.weight || 'normal'} ${font.size || 12}px ${font.family || "'Fredoka', sans-serif"}`;
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       ctx.fillText(`Total: $${total}`, centerX, centerY);
     }
-  };  
+  };
 
   const plugin = {
     id: 'emptyDoughnut',
     afterDraw(chart, args, options) {
-      const {datasets} = chart.data;
-      const {color, width, radiusDecrease} = options;
+      const { datasets } = chart.data;
+      const { color, width, radiusDecrease } = options;
       let hasData = false;
-  
+
       for (let i = 0; i < datasets.length; i += 1) {
         const dataset = datasets[i];
         hasData |= dataset.data.length > 0;
       }
-  
+
       if (!hasData) {
-        const {chartArea: {left, top, right, bottom}, ctx} = chart;
+        const { chartArea: { left, top, right, bottom }, ctx } = chart;
         const centerX = (left + right) / 2;
         const centerY = (top + bottom) / 2;
         const r = Math.min(right - left, bottom - top) / 2;
-  
+
         ctx.beginPath();
         ctx.lineWidth = width || 2;
         ctx.strokeStyle = color || '#3A2834';
@@ -71,18 +85,7 @@ const PieChart = () => {
           datasets: [{
             label: 'total',
             data,
-            backgroundColor: [
-              '#f44336', // Rojo
-              '#e91e63', // Rosa fuerte
-              '#9c27b0', // Púrpura
-              '#673ab7', // Azul violeta
-              '#3f51b5', // Azul índigo
-              '#2196f3', // Azul
-              '#03a9f4', // Azul cielo
-              '#00bcd4', // Cian
-              '#009688', // Verde esmeralda
-              '#4caf50', // Verde
-            ],
+            backgroundColor: backgroundColors,
             usePointStyle: true,
             hoverOffset: 8,
             spacing: 2,
@@ -92,19 +95,19 @@ const PieChart = () => {
         options={{
           responsive: true,
           maintainAspectRatio: true,
-          plugins: {     
-            centerTotalText:{
+          plugins: {
+            centerTotalText: {
               font: {
                 weight: 'normal',
                 size: 14,
                 family: "'Fredoka', 'sans-serif'",
               },
             },
-            emptyDoughnut: {              
+            emptyDoughnut: {
               color: '#3A2834',
               width: 1,
               radiusDecrease: 20
-            },            
+            },
             legend: {
               position: 'top',
               labels: {
@@ -113,7 +116,7 @@ const PieChart = () => {
                   size: 12,
                   family: "'Fredoka', 'sans-serif'",
                 },
-                
+
                 boxWidth: 10,
                 pointStyle: 'rect',
                 usePointStyle: true,
@@ -135,8 +138,8 @@ const PieChart = () => {
             }
           }
         }}
-        plugins= {
-          [plugin, doughnutLabel]          
+        plugins={
+          [plugin, doughnutLabel]
         }
       />
     </div>

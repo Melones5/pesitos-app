@@ -28,8 +28,7 @@ export const GlobalState = ({children}) => {
     dispatch({
       type: 'ADD_TRANSACTION',
       payload: data
-    })
-    console.log("addTransaction", data)
+    })    
   }  
 
   const deleteTransaction = (id) =>{

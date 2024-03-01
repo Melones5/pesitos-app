@@ -45,7 +45,9 @@ const PieChart = () => {
       ctx.font = `${font.weight || 'normal'} ${font.size || 12}px ${font.family || "'Fredoka', sans-serif"}`;
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
-      ctx.fillText(`Total: $${total}`, centerX, centerY);
+      ctx.fillText(`Total`, centerX, centerY - 20);
+      ctx.font = `bold ${font.size + 6 || 14}px ${font.family || "'Fredoka', sans-serif"}`;
+      ctx.fillText(`$${total}`, centerX, centerY + 4);
     }
   };
 
@@ -98,9 +100,9 @@ const PieChart = () => {
           plugins: {
             centerTotalText: {
               font: {
-                weight: 'normal',
+                weight: 'bolder',
                 size: 14,
-                family: "'Fredoka', 'sans-serif'",
+                family: "'Lato', sans-serif",
               },
             },
             emptyDoughnut: {
@@ -114,7 +116,7 @@ const PieChart = () => {
                 font: {
                   weight: 'normal',
                   size: 12,
-                  family: "'Fredoka', 'sans-serif'",
+                  family: "'Fredoka', sans-serif",
                 },
 
                 boxWidth: 10,
@@ -129,7 +131,7 @@ const PieChart = () => {
               font: {
                 weight: 'bolder',
                 size: 22,
-                family: "'Fredoka', 'sans-serif'",
+                family: "'Fredoka', sans-serif",
               },
               padding: {
                 top: 0,

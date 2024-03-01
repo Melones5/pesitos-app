@@ -44,9 +44,9 @@ Para visualizar el funcionamiento, se dejan a continuación una serie de gifs qu
 ## ❔ ¿De dónde nace la idea del proyecto?
 - Este proyecto nace como algo personal para llevar el control de los gastos / ingresos.
   - Ejemplo de Layout que me basé.
-  <div align="center" >
+<div align="center" >
       <img src="/public/ejemploLayout.png" width="280" alt="Logo">      
-  </div>
+</div>
 
 ### Funcionalidades 
 - Registro de un nuevo ingreso / gasto con nombre, monto, tipo, fecha y categoría.

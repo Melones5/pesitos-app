@@ -46,7 +46,7 @@ Para visualizar el funcionamiento, se dejan a continuación una serie de gifs qu
   - Ejemplo de Layout que me basé.
 
 <div align="center" >
-      <img src="/public/ejemploLayout.png" width="280" alt="Logo">      
+      <img src="/public/ejemploLayout.PNG" width="280" alt="Logo">      
 </div>
 
 ### Funcionalidades 

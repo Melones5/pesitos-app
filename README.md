@@ -4,7 +4,7 @@
 
 # Pesitos - https://pesitos-app.netlify.app/
 
-<span style="color:blue">## Pesitos</span>
+<span style="color:red">## Pesitos</span>
 
 - Este proyecto es una plataforma que registra las transacciones monetarias, calcula los saldos, el total tanto de ingresos como de gastos y las lista con el período de tiempo en el cual se desarrollaron las mismas.
 - Los datos quedan guardados en el localStorage del navegador.

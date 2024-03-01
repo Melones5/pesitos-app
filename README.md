@@ -9,7 +9,7 @@
 - Este proyecto es una plataforma que registra las transacciones monetarias, calcula los saldos, el total tanto de ingresos como de gastos y las lista con el período de tiempo en el cual se desarrollaron las mismas.
 - Los datos quedan guardados en el localStorage del navegador.
 - El sitio está publicado en **[Netlify](https://www.netlify.com/)**.
-- Ingresa al proyecto a través de este link: **<https://pesitos-app.netlify.app///>** 
+- Ingresa al proyecto a través de este link: **<https://pesitos-app.netlify.app/>** 
 
 
 ---
@@ -19,7 +19,7 @@
 - El proyecto Pesitos puede ser un proyecto simple, pero cubrió conceptos importantes para el desarrollo de aplicaciones web con React.
 - Se hizo uso de React con javascript como tecnologías principales.
 - Vite y Tailwind css también fueron implementados en el mismo.
-- Pantalla "inicio"
+- **Homepage**
 <div align="center" >
       <img src="/public/inicio.png" width="1000" alt="Logo">
 </div>
@@ -49,7 +49,7 @@ Para visualizar el funcionamiento, se dejan a continuación una serie de gifs qu
 - Cálculo del total de ingresos.
 - Cálculo del total de gastos.
 - Cálculo del balance (ingresos-gastos).
-- Gráfico de torta con el uso de Chartjs.
+- Gráfico de torta con el uso de **Chartjs**.
 - Eliminación de transacciónes.
 
 ### ¿Qué aprendí? 🧐
@@ -59,7 +59,7 @@ Para visualizar el funcionamiento, se dejan a continuación una serie de gifs qu
 - Creación de inputs personalizados para ingresar una fecha.
 - Uso de Sonner para mostrar toast personalizados.
 - Uso de react-hook-form para el formulario de registro de transacciones.}
-- REGISTRO DE TRANSACCIONES
+- **MODAL DE TRANSACCIONES**
 
 <div align="center" >
       <img src="/public/Modal.png" width="1000" alt="Logo">
@@ -70,30 +70,33 @@ Para visualizar el funcionamiento, se dejan a continuación una serie de gifs qu
 
 
 ## 👽 Tecnologías utilizadas
-- Chartjs
-- Date FNS
-- DayPicker
-  IMÁGEN
-- Sonner
-- JavaScript
-- Netlify
-- NodeJS
-- React
-- React Hook Form
-- TailwindCSS
-- Vite
-- NPM
-- Yup
+1. **Chartjs**
+2. **Date FNS**
+3. **Sonner**
+4. **JavaScript**
+5. **Netlify**
+6. **NodeJS**
+7. **React**
+8. **React Hook Form**
+9. **TailwindCSS**
+10. **Vite**
+11. **NPM**
+12. **Yup**
+13. **DayPicker**
+  <div align="center" >
+      <img src="/public/datePickerD.png" width="1000" alt="Logo">
+      <img src="/public/datePickerM.png" width="280" alt="Logo">
+  </div>
 
 
 ---
 
 
 ## 💻 Requisitos mínimos
-- NodeJS
-- ReactJS
-- Vite
-- NPM
+- **NodeJS**
+- **ReactJS**
+- **Vite**
+- **NPM**
 
 
 ---
